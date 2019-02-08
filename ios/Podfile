@@ -59,6 +59,8 @@ target 'Runner' do
     symlink = File.join('.symlinks', 'plugins', p[:name])
     File.symlink(p[:path], symlink)
     pod p[:name], :path => File.join(symlink, 'ios')
+    pod 'GoogleAppMeasurement', '5.3.0'
+    pod 'Firebase', '5.11.0'
   }
 end
 
